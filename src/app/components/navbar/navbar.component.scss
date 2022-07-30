@@ -1,0 +1,29 @@
+nav{
+  background-color: #343a40;
+}
+
+.navbar-toggler {
+  box-shadow: none !important;
+
+  .navbar-toggler-icon {
+    height: 3px;
+    margin: 5px;
+    display: block;
+    background-color: #888;
+  }
+}
+
+ul li {
+    color: #fff ;
+}
+
+.active {
+  color: #09c !important;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #09c;
+}
+
+ul li:hover {
+  cursor: pointer;
+}
+

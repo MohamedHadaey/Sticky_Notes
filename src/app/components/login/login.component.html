@@ -1,0 +1,39 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="pacman" [fullScreen]="true">
+  <h4 style="color: white;font-weight: bold;"> Loading... </h4>
+</ngx-spinner>
+<section id="signin">
+  <div class="container">
+    <div class="form m-auto">
+      <div *ngIf="error" class="alert alert-danger my-4"> {{error}} </div>
+      <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid&&submitLoginForm(loginForm)">
+        <div class="row">
+          <div class="col-12 mt-2">
+            <input formControlName="email"
+              [class.is-valid]="loginForm.get('email')?.valid && loginForm.get('email')?.touched"
+              [class.is-invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" type="email"
+              class="form-control" id="email" autocomplete="off" placeholder="Enter Your Email">
+            <div class="alert alert-danger mt-2 p-2 mb-0"
+              *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+              <p *ngIf="loginForm.get('email')?.errors?.['required']">Email is required</p>
+              <p *ngIf="loginForm.get('email')?.errors?.['email']">Email is not valid ex: example@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-12 mt-2">
+            <input formControlName="password"
+              [class.is-valid]="loginForm.get('password')?.valid && loginForm.get('password')?.touched"
+              [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+              type="password" class="form-control" id="password" autocomplete="off" placeholder="Enter Password">
+            <div class="alert alert-danger mt-2 p-2 mb-0"
+              *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+              <p *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</p>
+              <p *ngIf="loginForm.get('password')?.errors?.['pattern']">Password is not valid, must be from 5-15
+                characters </p>
+            </div>
+          </div>
+        </div>
+        <button [disabled]="loginForm.invalid" type="submit" [ngStyle]="loginForm.invalid? isStyleInvalid: isStyleValid"
+          class="btn form-control mt-2">Sign In</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="pacman" [fullScreen]="true">
+  <h4 style="color: white;font-weight: bold;"> Loading... </h4>
+</ngx-spinner>
+<nav class="navbar navbar-expand-lg fixed-top shadow shadow-lg">
+  <div class="container">
+    <a class="navbar-brand text-white"><i class="far fa-sticky-note"></i> &nbsp; Notes</a>
+    <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li *ngIf="!isLogin" routerLinkActive="active" routerLink="login" class="pt-2 me-3">SignIn</li>
+        <li *ngIf="!isLogin" routerLinkActive="active" routerLink="register" class="pt-2 me-3">SignUp</li>
+        <li *ngIf="isLogin" (click)="logOut()" class="pt-2">Logout</li>
+      </ul>
+    </div>
+  </div>
+</nav>

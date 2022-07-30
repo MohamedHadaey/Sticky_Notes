@@ -1,0 +1,117 @@
+#profile {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #343a40;
+}
+
+.note {
+  border-radius: 10px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.note p {
+  font-size: 20px;
+  direction: rtl;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row:nth-of-type(2) .col-sm-6:nth-child(n) .note {
+  background: linear-gradient(90deg, #2da7ff, #117aff);
+}
+
+.row:nth-of-type(2) .col-sm-6:nth-child(8n+1).note {
+  background: linear-gradient(90deg, #2da7ff, #117aff);
+}
+
+.row:nth-of-type(2) .col-sm-6:nth-child(8n+2) .note {
+  background: linear-gradient(90deg, #ff9448, #ff5411);
+}
+
+.row:nth-of-type(2) .col-sm-6:nth-child(8n+3) .note {
+  background: linear-gradient(90deg, #bf65f7, #793cf3);
+}
+
+.row:nth-of-type(2) .col-sm-6:nth-child(8n+4) .note {
+  background: linear-gradient(90deg, #ff0cf1, #fa0087);
+}
+
+.row:nth-of-type(2) .col-sm-6:nth-child(8n+5) .note {
+  background: linear-gradient(90deg, #78f9ce, #0fcfaf);
+}
+
+.row:nth-of-type(2) .col-sm-6:nth-child(8n+6) .note {
+  background: linear-gradient(90deg, #fae59b, #fff648);
+}
+
+.row:nth-of-type(2) .col-sm-6:nth-child(8n+7) .note {
+  background: linear-gradient(90deg, #f8a4cf, #dc5cb7);
+}
+
+.row:nth-of-type(2) .col-sm-6:nth-child(8n+8) .note {
+  background: linear-gradient(90deg, #cac6c8, #a5a3a4);
+}
+
+#funBtn,
+#cancelBtn {
+  color: #fff;
+  transition: all 0.4s;
+}
+
+#funBtn {
+  background-color: rgb(8, 166, 218);
+}
+
+#funBtn:hover {
+  background-color: rgb(7, 133, 175);
+}
+
+#cancelBtn {
+  background-color: rgb(243, 77, 31);
+}
+
+#cancelBtn:hover {
+  background-color: rgb(206, 59, 18);
+}
+
+.drop1,
+.drop2 {
+  padding: 10px 10px 0 10px;
+  transition: all 0.4s;
+}
+
+.drop1 {
+  color: rgb(8, 166, 218);
+}
+
+.drip1:hover {
+  color: rgb(7, 133, 175);
+}
+
+.drop2 {
+  color: rgb(243, 77, 31);
+}
+
+.drip2:hover {
+  background-color: rgb(206, 59, 18);
+}
+
+.dropdown>i {
+  font-size: 25px;
+  margin-right: 0;
+}
+
+.dropdown>i:hover {
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  margin: 0px auto 15px auto;
+  border-bottom: 2px solid #888;
+}
