@@ -29,7 +29,7 @@ export class AuthService {
     this._Router.navigate(['/login']);
   }
 
-  baseURL = 'https://route-egypt-api.herokuapp.com/';
+  baseURL = 'https://routeegypt.herokuapp.com/';
 
   signUp(formData: object): Observable<any> {
     return this._HttpClient.post(`${this.baseURL}signup`, formData);
